@@ -29,7 +29,7 @@ def quiz_handler(call):
         # Все вопросы пройдены, показываем результаты
         results_handler(call, user_answers)
 
-
+## bot переработать
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
     if call.data in [option for question in questions for option in question['options']]:
